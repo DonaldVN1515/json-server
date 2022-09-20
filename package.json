@@ -1,0 +1,24 @@
+{
+	"name": "json-server-nodejs",
+	"version": "1.0.0",
+	"description": "json-server-nodejs",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon index.js",
+		"start": "npm run rand-data && node index.js",
+		"rand-data": "node random-data.js"
+	},
+	"keywords": [
+		"json-server"
+	],
+	"author": "donaldvn",
+	"license": "MIT",
+	"dependencies": {
+		"json-server": "^0.17.0"
+	},
+	"devDependencies": {
+		"casual": "^1.6.2",
+		"nodemon": "^2.0.20"
+	}
+}

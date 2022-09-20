@@ -1,0 +1,60 @@
+@baseUrl=http://localhost:3000/api
+
+@resourceName=products
+
+###
+# @name getAll
+GET {{baseUrl}}/{{resourceName}}
+
+###
+# @name filter
+GET {{baseUrl}}/{{resourceName}}?name=autem
+
+###
+
+GET {{baseUrl}}/{{resourceName}}?name_like=e
+###
+# @name pagination
+GET {{baseUrl}}/{{resourceName}}?_page=1&_limit=2
+
+
+###
+# @name sort
+GET {{baseUrl}}/{{resourceName}}?_sort=name&_order=asc
+
+
+
+###
+
+# @name addNew
+
+POST {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+ {
+    "categoryId": "65a44bdf-5e8a-4457-91f6-7b012147e57b",
+    "name": "laudantium abc",
+    "color": "#3b4689",
+    "price": 500,
+    "desc": "Et tempore non et. Est nesciunt veritatis. Labore quisquam numquam."
+  }
+
+###
+# @name update
+
+PATCH {{baseUrl}}/{{resourceName}}/GqjCNBs
+Content-Type: application/json
+
+ {
+    "categoryId": "65a44bdf-5e8a-4457-91f6-7b012147e57b",
+    "name": "laudantium Update again",
+    "color": "#3b4689",
+    "price": 9990,
+    "desc": "Et tempore non et. Est nesciunt veritatis. Labore quisquam numquam."
+  }
+
+###
+
+# @name remove
+
+DELETE  {{baseUrl}}/{{resourceName}}/2

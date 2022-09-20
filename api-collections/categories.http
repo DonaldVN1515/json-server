@@ -1,0 +1,34 @@
+@baseUrl='http://localhost:3000/api'
+
+@resourceName='categories'
+
+# ##
+# @name getAll
+GET http://localhost:3000/api/categories
+
+###
+
+# @name addNew
+
+POST {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+{
+  "name":"laptop"
+}
+
+###
+# @name update
+
+PATCH {{baseUrl}}/{{resourceName}}/2
+Content-Type: application/json
+
+{
+  "name" : "new Laptop"
+}
+
+###
+
+# @name remove
+
+DELETE  {{baseUrl}}/{{resourceName}}/2
